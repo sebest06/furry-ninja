@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="furry-ninja" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/furry-ninja" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/furry-ninja" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add option="-lpthread" />
+		</Linker>
+		<Unit filename="almacen.cpp" />
+		<Unit filename="almacen.h" />
+		<Unit filename="banca.cpp" />
+		<Unit filename="banca.h" />
+		<Unit filename="cliente.cpp" />
+		<Unit filename="cliente.h" />
+		<Unit filename="fabrica.cpp" />
+		<Unit filename="fabrica.h" />
+		<Unit filename="generico.cpp" />
+		<Unit filename="generico.h" />
+		<Unit filename="legislador.cpp" />
+		<Unit filename="legislador.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="mythread.cpp" />
+		<Unit filename="mythread.h" />
+		<Unit filename="operador.cpp" />
+		<Unit filename="operador.h" />
+		<Unit filename="server.cpp" />
+		<Unit filename="server.h" />
+		<Unit filename="servidor.cpp" />
+		<Unit filename="servidor.h" />
+		<Unit filename="sesion.cpp" />
+		<Unit filename="sesion.h" />
+		<Unit filename="visor.cpp" />
+		<Unit filename="visor.h" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
