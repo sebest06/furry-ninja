@@ -31,12 +31,14 @@ class Sesion
         void getVotantesPositivos(int op);
         void getVotantesNegativos(int op);
         void getVotantesAbtenidos(int op);
+        void getListaPalabra(int op);
 
     protected:
     private:
         void sendToAllBancas(char* message, int len);
         void sendToBanca(char* message, int len, int banca);
         void respondToOp(char* message, int len, int op);
+        void manejarPedidoPalabra(Legislador MiLegislador);
         bool m_votacion;
         Sesion();
         static Sesion* s_pInstance;

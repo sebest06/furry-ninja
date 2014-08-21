@@ -73,5 +73,9 @@ void Operador::procesarDatos(char* buffer, int len)
     {
         LaSesion::Instance()->getVotantesAbtenidos(getId());
     }
+    else if(strcmp(pch,"listaPalabra") == 0)
+    {
+        LaSesion::Instance()->getListaPalabra(getId());
+    }
 
 }
