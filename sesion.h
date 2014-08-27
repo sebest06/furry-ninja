@@ -38,7 +38,7 @@ class Sesion
         void sendToAllBancas(char* message, int len);
         void sendToBanca(char* message, int len, int banca);
         void respondToOp(char* message, int len, int op);
-        void manejarPedidoPalabra(Legislador MiLegislador);
+        void manejarPedidoPalabra(int indice);
         bool m_votacion;
         Sesion();
         static Sesion* s_pInstance;

@@ -184,26 +184,27 @@ void Sesion::setDatosBanca(Legislador MiLegislador, int indice)
 {
     MiLegislador.setConnect(true);  // tengo que pensar que hacer cuando se desconecte alguna banca
     m_pBancas[indice] = MiLegislador;
-    manejarPedidoPalabra(MiLegislador);
+    manejarPedidoPalabra(indice);
 }
 
-void Sesion::manejarPedidoPalabra(Legislador MiLegislador)
+void Sesion::manejarPedidoPalabra(int indice)
 {
-    int yaEstaAnotado = false;
-    if(MiLegislador.getPidePalabra())
+    bool yaEstaAnotado = false;
+    if((m_pBancas[indice].getPidePalabra()) && (m_pBancas[indice].getBioId() != 0))
     {
         for(unsigned int i=0; i< m_pOrdenPedidoPalabras.size() ; i++)
         {
-            if(m_pOrdenPedidoPalabras[i]->getBioId() == MiLegislador.getBioId())
+            if(m_pOrdenPedidoPalabras[i]->getBioId() == m_pBancas[indice].getBioId())
             {
                 yaEstaAnotado = true;
             }
         }
         if(!yaEstaAnotado)
         {
-            m_pOrdenPedidoPalabras.push_back(&MiLegislador);
+            m_pOrdenPedidoPalabras.push_back(&m_pBancas[indice]);
         }
     }
+
 }
 
 
@@ -254,7 +255,7 @@ void Sesion::getListaPalabra(int op)
     for(unsigned int i=0; i< m_pOrdenPedidoPalabras.size() ; i++)
     {
         buffer[i] = m_pOrdenPedidoPalabras[i]->getBioId();
-        printf("%d,",buffer[i]);
+        printf("%d,",(int)buffer[i]);
     }
     printf("\n");
     respondToOp(buffer,m_pOrdenPedidoPalabras.size(),op);
